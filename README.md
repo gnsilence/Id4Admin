@@ -20,10 +20,10 @@ Identityserver4和Asp.net core Identity身份管理系统
 系统结构图：
 ====
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/Skoruba.IdentityServer4.Admin-Solution.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/Skoruba.IdentityServer4.Admin-Solution.png)
 
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/Skoruba.IdentityServer4.Admin-App-Diagram.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/Skoruba.IdentityServer4.Admin-App-Diagram.png)
 
 
 系统截图：
@@ -31,24 +31,24 @@ Identityserver4和Asp.net core Identity身份管理系统
 
 管理端界面：
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/AdminServer.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/AdminServer.png)
 
 添加客户端：
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/ClientsAdd.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/ClientsAdd.png)
 
 编辑客户端：
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/EditClient.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/EditClient.png)
 
 添加Api Resources
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/AddApiResources.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/AddApiResources.png)
 
 IdentityServer 服务端 ：
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/IdentityServer.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/IdentityServer.png)
 
 授权查看和管理：
 
-![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/ManageGrants.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/ManageGrants.png)
