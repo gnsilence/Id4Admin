@@ -3,9 +3,8 @@ Identityserver4和Asp.net core Identity身份管理系统
 
 * 运行环境 .net core 2.2
 
-* 目前支持的数据库：
+* 目前支持的数据库：SQL server， Mysql ，PostgreSQL， Sqlite,更多数据库支持需要自行测试
 
-SQL server， Mysql ，PostgreSQL， Sqlite,更多数据库支持需要自行测试
 ---------------------
 
 # 系统文档及说明
