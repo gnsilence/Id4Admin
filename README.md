@@ -39,7 +39,7 @@ Identityserver4和Asp.net core Identity身份管理系统
 
 编辑客户端：
 
-![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/EditClient.png)
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/EditClient.png)
 
 添加Api Resources
 
