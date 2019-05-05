@@ -2,9 +2,6 @@
 Identityserver4和Asp.net core Identity身份管理系统
 
 # 系统文档及说明
-====
-
------------------------------
 
 ## 项目作者GitHub地址(https://github.com/skoruba/IdentityServer4.Admin)
 
@@ -32,26 +29,26 @@ Identityserver4和Asp.net core Identity身份管理系统
 系统截图：
 ====
 
-* 管理端界面：
+管理端界面：
 
 ![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/AdminServer.png)
 
-* 添加客户端：
+添加客户端：
 
 ![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/ClientsAdd.png)
 
-* 编辑客户端：
+编辑客户端：
 
 ![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/EditClient.png)
 
-* 添加Api Resources
+添加Api Resources
 
 ![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/AddApiResources.png)
 
-* IdentityServer 服务端 ：
+IdentityServer 服务端 ：
 
 ![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/IdentityServer.png)
 
-* 授权查看和管理：
+授权查看和管理：
 
 ![image](https://github.com/gnsilence/Id4Admin/tree/master/docs/Images/App/ManageGrants.png)
