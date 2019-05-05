@@ -17,11 +17,11 @@ Identityserver4和Asp.net core Identity身份管理系统
 
 * 文档会持续更新.
 
-欢迎完善文档，文档github地址(https://github.com/gnsilence/id4admindocs)
+> > 欢迎完善文档，文档github地址(https://github.com/gnsilence/id4admindocs)
 
 * 客户端示例程序GitHub地址(https://github.com/gnsilence/Id4Clients)
 
-注意此客户端目前我只更改配置了
+> > 注意此客户端目前我只更改配置了
 JsOidc, MvcHybrid, MvcHybridAutomaticRefresh(自动刷新token示例),
 SampleApi(api接口测试)
 这些目前可以通过admin管理端配置，测试使用
