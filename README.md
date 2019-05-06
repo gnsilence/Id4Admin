@@ -40,30 +40,38 @@ SampleApi(api接口测试)
 系统截图：
 ====
 
-管理端界面：
+* 管理端界面：
 
 ![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/AdminServer.png)
 
-添加客户端：
+* 添加客户端：
 
 ![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/ClientsAdd.png)
 
-编辑客户端：
+* 编辑客户端：
 
 ![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/EditClient.png)
 
-添加Api Resources
+* 令牌设置：
+
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/STSset.png)
+
+* 用户角色及第三方登录管理
+
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/UserRole.png)
+
+* 添加Api Resources
 
 ![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/AddApiResources.png)
 
-IdentityServer 服务端 ：
+* IdentityServer 服务端 ：
 
 ![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/IdentityServer.png)
 
-授权查看和管理：
+* 授权查看和管理：
 
 ![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/ManageGrants.png)
 
-配置两步认证(双因素认证2FA):
+* 配置两步认证(双因素认证2FA):
 
 ![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/2FASet.png)
