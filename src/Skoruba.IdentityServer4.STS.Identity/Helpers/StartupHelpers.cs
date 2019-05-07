@@ -3,6 +3,9 @@ using System.Globalization;
 using System.Reflection;
 using IdentityServer4.EntityFramework.Interfaces;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.MicrosoftAccount;
+using Microsoft.AspNetCore.Authentication.QQ;
+using Microsoft.AspNetCore.Authentication.WeChat;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpOverrides;
@@ -266,6 +269,35 @@ namespace Skoruba.IdentityServer4.STS.Identity.Helpers
                     options.ClientId = externalProviderConfiguration.GitHubClientId;
                     options.ClientSecret = externalProviderConfiguration.GitHubClientSecret;
                     options.Scope.Add("user:email");
+                });
+            }
+            if (externalProviderConfiguration.UseMicrosoftAccountProvider)
+            {
+                authenticationBuilder.AddMicrosoftAccount(options =>
+                {
+                    options.RemoteAuthenticationTimeout = TimeSpan.FromMinutes(30);
+                    options.ClientId = externalProviderConfiguration.MicrosoftAccountClientId;
+                    options.ClientSecret = externalProviderConfiguration.MicrosoftAccountClientSecret;
+                });
+            }
+            if (externalProviderConfiguration.UseQQProvider)
+            {
+                authenticationBuilder.AddQQ("QQ", options =>
+                {
+                    options.AppId = externalProviderConfiguration.QQAppId;
+                    options.AppKey = externalProviderConfiguration.QQAppSecret;
+                    options.RemoteAuthenticationTimeout = TimeSpan.FromMinutes(30);
+                });
+            }
+
+            if (externalProviderConfiguration.UseWeChatProvider)
+            {
+                authenticationBuilder.AddWeChat(woptions =>
+                {
+                    woptions.RemoteAuthenticationTimeout = TimeSpan.FromMinutes(30);
+                    woptions.AppId = externalProviderConfiguration.WeChatAppId;
+                    woptions.AppSecret = externalProviderConfiguration.WeChatSecret;
+                    woptions.UseCachedStateDataFormat = true;
                 });
             }
         }

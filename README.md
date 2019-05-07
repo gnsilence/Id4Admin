@@ -9,9 +9,9 @@ Identityserver4和Asp.net core Identity身份管理系统
 
 # 系统文档及说明
 
-* 项目作者GitHub地址(https://github.com/skoruba/IdentityServer4.Admin)
+* 项目作者是一个捷克人,他的GitHub地址(https://github.com/skoruba/IdentityServer4.Admin)
 
-* 注意此版本是从作者的dev分支获取的，已经修改了一些功能，和原版本不一样。
+* 注意此版本是从作者的dev分支获取的，已经修改了一些功能，和原版本不一样,更符合国人的使用。
 
 * 我写的文档地址(https://id4admindocs.readthedocs.io/zh_CN/latest)
 
@@ -39,6 +39,10 @@ SampleApi(api接口测试)
 
 系统截图：
 ====
+
+* 登录界面
+
+![image](https://github.com/gnsilence/Id4Admin/blob/master/docs/Images/App/ExternalLogin.png)
 
 * 管理端界面：
 
