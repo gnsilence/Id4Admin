@@ -20,6 +20,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Logging;
 using SendGrid;
 using Serilog;
 using Skoruba.IdentityServer4.STS.Identity.Configuration;
@@ -299,6 +300,16 @@ namespace Skoruba.IdentityServer4.STS.Identity.Helpers
                     woptions.AppSecret = externalProviderConfiguration.WeChatSecret;
                     woptions.UseCachedStateDataFormat = true;
                 });
+
+            }
+            if (externalProviderConfiguration.UseWeiboProvider)
+            {
+
+                authenticationBuilder.AddWeibo(options =>
+                {
+                    options.ClientId = externalProviderConfiguration.WeiboAppId;
+                    options.ClientSecret = externalProviderConfiguration.WeiboSecret;
+                });
             }
         }
 
@@ -333,6 +344,7 @@ namespace Skoruba.IdentityServer4.STS.Identity.Helpers
         private static void RegisterIdentityDbContext<TContext>(IServiceCollection services, IConfiguration configuration)
             where TContext : DbContext
         {
+            IdentityModelEventSource.ShowPII = true;
             //get sqltype
             var sqltype = Convert.ToInt32(configuration["SqlDbType:Type"]);
 

@@ -1,0 +1,69 @@
+version: '3.4'
+
+services:
+  skoruba.identityserver4.admin:
+    image: ${DOCKER_REGISTRY-}skoruba-identityserver4-admin
+    restart: always
+    ports:
+      - 9001:80
+    networks:
+      - "default"
+    build:
+      context: .
+      dockerfile: src/Skoruba.IdentityServer4.Admin/Dockerfile
+    container_name: skoruba-identityserver4-admin
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:ConfigurationDbConnection=Server=db;Port=3306;Database=IdentityServer4Admin;Uid=root;Pwd=123456;charset=utf8;SslMode=none;"
+      - "ConnectionStrings:PersistedGrantDbConnection=Server=db;Port=3306;Database=IdentityServer4Admin;Uid=root;Pwd=123456;charset=utf8;SslMode=none;"
+      - "ConnectionStrings:IdentityDbConnection=Server=db;Port=3306;Database=IdentityServer4Admin;Uid=root;Pwd=123456;charset=utf8;SslMode=none;"
+      - "ConnectionStrings:AdminLogDbConnection=Server=db;Port=3306;Database=IdentityServer4Admin;Uid=root;Pwd=123456;charset=utf8;SslMode=none;"
+      - "AdminConfiguration:IdentityAdminBaseUrl=http://47.105.185.242:9001"
+      - "AdminConfiguration:IdentityAdminRedirectUri=http://47.105.185.242:9001/signin-oidc"
+      - "AdminConfiguration:IdentityServerBaseUrl=http://47.105.185.242:5001"
+    command: dotnet Skoruba.IdentityServer4.Admin.dll /seed
+    depends_on:
+      - db
+      - skoruba.identityserver4.sts.identity
+
+  skoruba.identityserver4.sts.identity:
+    image: ${DOCKER_REGISTRY-}skoruba-identityserver4-sts-identity
+    restart: always
+    ports:
+      - 5001:80
+    build:
+      context: .
+      dockerfile: src/Skoruba.IdentityServer4.STS.Identity/Dockerfile
+    container_name: skoruba-identityserver4-sts-identity
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - "ConnectionStrings:ConfigurationDbConnection=Server=db;Port=3306;Database=IdentityServer4Admin;Uid=root;Pwd=123456;charset=utf8;SslMode=none;"
+      - "ConnectionStrings:PersistedGrantDbConnection=Server=db;Port=3306;Database=IdentityServer4Admin;Uid=root;Pwd=123456;charset=utf8;SslMode=none;"
+      - "ConnectionStrings:IdentityDbConnection=Server=db;Port=3306;Database=IdentityServer4Admin;Uid=root;Pwd=123456;charset=utf8;SslMode=none;"
+    depends_on:
+      - db
+    networks:
+      default:
+
+  db:
+    image: "mysql:5.7"
+    restart: always
+    ports:
+      - "3306:3306"
+    container_name: skoruba-identityserver4-db
+    networks:
+      - "default"
+    environment:
+      MYSQL_USER: "root"
+      MYSQL_ROOT_PASSWORD: "123456"
+      MYSQL_PASS: "123456"
+    volumes:
+      - "./data:/var/lib/mysql"
+
+volumes:
+  dbdata:
+    driver: local
+
+networks:
+  default:
+    driver: bridge

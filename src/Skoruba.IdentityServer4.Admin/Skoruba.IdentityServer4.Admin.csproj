@@ -4,6 +4,7 @@
 		<TargetFramework>netcoreapp2.2</TargetFramework>
 		<LangVersion>latest</LangVersion>
 		<UserSecretsId>8fe260ca-ef4c-4fa3-9364-029146f8d339</UserSecretsId>
+		<DockerComposeProjectPath>..\..\docker-compose.dcproj</DockerComposeProjectPath>
 	</PropertyGroup>
 
 	<ItemGroup>

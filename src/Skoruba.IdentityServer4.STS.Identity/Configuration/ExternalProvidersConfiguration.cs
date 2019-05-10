@@ -38,5 +38,12 @@
         public string WeChatAppId { get; set; }
         public string WeChatSecret { get; set; }
 
+        /// <summary>
+        /// USE Weibo Login
+        /// </summary>
+        public bool UseWeiboProvider { get; set; }
+        public string WeiboAppId { get; set; }
+        public string WeiboSecret { get; set; }
+
     }
 }
