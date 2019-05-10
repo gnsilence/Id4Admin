@@ -6,10 +6,11 @@ Identityserver4和Asp.net core Identity身份管理系统
 * 目前支持的数据库：SQL server， Mysql ，PostgreSQL， Sqlite,更多数据库支持需要自行测试
 
 * 演示地址：
-> > 环境 Linux centos 7.3 + Docker + Mysql 5.7
-> > admin管理端地址：http://47.105.185.242:9001          账号：admin  密码：Pa$$word123
-> > identityserver地址：http://47.105.185.242:5001      
-> > 可以自行注册账号测试，注意密码必须包含大小写，特殊符号
+> > - 环境 Linux centos 7.3 + Docker + Mysql 5.7
+> > - admin管理端地址：http://47.105.185.242:9001          
+      账号：admin  密码：Pa$$word123
+> > - identityserver地址：http://47.105.185.242:5001      
+> > - 可以自行注册账号测试，注意密码必须包含大小写，特殊符号
 ---------------------
 
 # 系统文档及说明
