@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "jquery": "3.3.1",
-    "jquery-validation": "1.19.0",
+    "jquery-validation": "1.19.4",
     "jquery-validation-unobtrusive": "3.2.11",
     "bootstrap": "4.3.1",
     "knockout": "3.4.2",
