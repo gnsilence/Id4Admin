@@ -20,7 +20,7 @@
     "holderjs": "2.9.4",
     "open-iconic": "1.1.1",
     "moment": "2.22.2",
-    "moment-timezone": "0.5.21",
+    "moment-timezone": "0.5.35",
     "tempusdominus-core": "5.0.3",
     "font-awesome": "4.7.0"
   },
